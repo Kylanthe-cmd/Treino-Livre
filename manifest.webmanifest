@@ -1,0 +1,38 @@
+{
+  "name": "Treino Livre — Acompanhamento de Treinos",
+  "short_name": "Treino Livre",
+  "description": "Registre musculação e cardio, séries, descanso, evolução e histórico. Seus dados ficam no dispositivo.",
+  "id": "./index.html",
+  "start_url": "./index.html",
+  "scope": "./",
+  "display": "standalone",
+  "background_color": "#0b0e13",
+  "theme_color": "#101318",
+  "lang": "pt-BR",
+  "orientation": "any",
+  "categories": [
+    "health",
+    "fitness",
+    "lifestyle"
+  ],
+  "icons": [
+    {
+      "src": "./icons/icon-192.png",
+      "sizes": "192x192",
+      "type": "image/png",
+      "purpose": "any"
+    },
+    {
+      "src": "./icons/icon-512.png",
+      "sizes": "512x512",
+      "type": "image/png",
+      "purpose": "any"
+    },
+    {
+      "src": "./icons/icon-maskable-512.png",
+      "sizes": "512x512",
+      "type": "image/png",
+      "purpose": "maskable"
+    }
+  ]
+}

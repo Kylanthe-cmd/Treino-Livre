@@ -1,0 +1,51 @@
+TREINO LIVRE — VERSÃO INSTALÁVEL (PWA) — 12/11/2026
+
+O QUE VEM NO PACOTE
+- index.html: aplicativo para publicação num endereço HTTPS.
+- TreinoLivre.html: o mesmo aplicativo que você pode abrir localmente no PC.
+- manifest.webmanifest: nome, ícone e aparência do app instalado.
+- service-worker.js: funcionamento offline depois do primeiro acesso via HTTPS.
+- icons/: ícones para Android, iPhone, favicon e atalho do Windows (.ico).
+- Todos os recursos estão no ZIP; não há servidores, frameworks ou bibliotecas pagas.
+
+IMPORTANTE — SEUS DADOS
+- Antes de mudar para a versão PWA, abra o HTML antigo e clique em Backup → Exportar backup.
+- Os dados (incluindo mídias) ficam no IndexedDB do navegador, POR ORIGEM.
+- Abrir o HTML local e abrir a PWA em um site HTTPS utiliza armazenamentos SEPARADOS.
+- Assim que a PWA estiver instalada, importe o backup .json usando Backup → Importar backup.
+- O Service Worker armazena arquivos do aplicativo para uso offline, não os seus treinos.
+- Evite janela anônima e faça backups periódicos.
+
+INSTALAR NA TELA INICIAL DO ANDROID (CHROME)
+1) Publique TODOS os arquivos e a pasta icons/ em um servidor HTTPS estático.
+   GitHub Pages ou outro serviço de páginas estáticas é suficiente; não precisa backend.
+2) Abra o endereço HTTPS do app no Chrome do Android, com internet no primeiro acesso.
+3) Toque nos três pontinhos (⋮) > "Instalar app" ou "Adicionar à tela inicial".
+4) Confirme. O ícone do Treino Livre aparecerá na tela inicial ou no menu de apps.
+5) Abra uma vez online; o app deverá continuar abrindo offline após o cache ser salvo.
+
+INSTALAR NO IPHONE (SAFARI)
+1) Abra a mesma URL HTTPS no Safari.
+2) Compartilhar > Adicionar à Tela de Início > Adicionar.
+
+INSTALAR NO COMPUTADOR (CHROME/EDGE)
+- Abra a URL HTTPS e use o menu "Instalar Treino Livre" (ou ícone de instalação na barra).
+- Para criar somente um atalho do HTML local no desktop:
+  • Clique com o botão direito na área de trabalho > Novo > Atalho.
+  • Selecione o arquivo TreinoLivre.html e conclua.
+  • Propriedades > Alterar Ícone > Procurar > icons/TreinoLivre.ico.
+
+PUBLICAR GRATUITAMENTE NO GITHUB PAGES (UMA POSSIBILIDADE)
+1) Crie um repositório no GitHub e envie index.html, TreinoLivre.html,
+   manifest.webmanifest, service-worker.js e a pasta icons/ (não envie seus backups).
+2) Settings > Pages > Deploy from a branch > main > /(root) > Save.
+3) Abra o endereço HTTPS do GitHub Pages indicado na configuração.
+4) Use esse endereço no celular para instalar. Os arquivos-fonte ficam públicos se
+   você escolher um repositório público; seus treinos armazenados no celular não são enviados.
+
+LIMITAÇÕES
+- Não é possível instalar uma PWA padrão diretamente de um arquivo file://.
+- Hospedar apenas no PC por http://192.168... não atende às condições de instalação
+  (salvo ambientes de desenvolvimento em localhost, no próprio aparelho).
+- Ao trocar de endereço/site/domínio, será necessário restaurar seu backup.
+- O HTML sozinho não inclui o arquivo de ícone para instalação. Mantenha o pacote completo.
